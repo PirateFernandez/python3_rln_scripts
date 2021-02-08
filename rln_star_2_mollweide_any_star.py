@@ -82,21 +82,21 @@ x_120_rad = [2.094 for i in range(0,7)]
 x_m120_rad = [-2.094 for i in range(0,7)]
 #####
 """Plotting with matplotlib."""
-plt.figure()
-plt.subplot(111, projection="mollweide")
+fig = plt.figure()
+ax = plt.subplot(111, projection="mollweide")
 """s-->size of the dots, alpha--> tranparency with 0 transparent and 1 opaque."""
-plt.scatter(rot_rad, tilt_m90_rad, cmap=color_cmap, c=m, s=2, alpha=0.4)
+ax.scatter(rot_rad, tilt_m90_rad, cmap=color_cmap, c=m, s=2, alpha=0.4)
 """Thse two lines remove the ticks and their labels."""
-plt.xticks([])
-plt.yticks([])
+ax.xticks([])
+ax.yticks([])
 """These for lines draw curve lines at x -120, -60, 60, 120."""
 ax.plot(x_60_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
 ax.plot(x_m60_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
 ax.plot(x_120_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
 ax.plot(x_m120_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
 """These two lines draw vertical and horizontal straight lines as x, y cartesian axes."""
-plt.vlines(0,-1.6,1.6, colors='k', lw=1.5, linestyles=':')
-plt.hlines(0,-10,10, colors='k', lw=1.5, linestyles=':')
+ax.vlines(0,-1.6,1.6, colors='k', lw=1.5, linestyles=':')
+ax.hlines(0,-10,10, colors='k', lw=1.5, linestyles=':')
 plt.savefig(root_path, dpi=300)
 plt.show()
 
