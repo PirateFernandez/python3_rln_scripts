@@ -87,7 +87,7 @@ ax = plt.subplot(111, projection="mollweide")
 """s-->size of the dots, alpha--> tranparency with 0 transparent and 1 opaque."""
 ax.scatter(rot_rad, tilt_m90_rad, cmap=color_cmap, c=m, s=2, alpha=0.4)
 """Thse two lines remove the ticks and their labels."""
-ax.set_yticklabels([])
+ax.set_xticklabels([])
 ax.set_yticklabels([])
 """These for lines draw curve lines at x -120, -60, 60, 120."""
 ax.plot(x_60_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
