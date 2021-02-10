@@ -26,7 +26,9 @@ root_path = "/".join(root_path_pre)
 with open(filewithpath, 'r') as f:
 	filelines_pre = f.readlines()
 """Remove the three first line of the file and the last line."""
-filelines = filelines_pre[4:-2]
+filelines_pre_2 = filelines_pre[4:-2]
+"""Remove empty lines from list of lines."""
+filelines = list(filter(none, filelines_pre_2))
 """Split the all-file list to two list containing lines from the header and lines with particle information."""
 #####
 filelines_header = []
