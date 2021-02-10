@@ -25,10 +25,8 @@ root_path = "/".join(root_path_pre)
 """Open python object with the user supplied file and read the file to a list where every line is an element of the list."""
 with open(filewithpath, 'r') as f:
 	filelines_pre = f.readlines()
-"""Remove the three first line of the file and the last line."""
-filelines_pre_2 = filelines_pre[4:-2]
 """Remove empty lines from list of lines."""
-filelines = list(filter(none, filelines_pre_2))
+filelines = [i for i in filelines_pre if i != '\n']
 """Split the all-file list to two list containing lines from the header and lines with particle information."""
 #####
 filelines_header = []
