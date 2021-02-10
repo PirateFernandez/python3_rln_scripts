@@ -52,7 +52,7 @@ for i in filelines_header_clean:
 		tilt_column_list = i.split("#")
 		tilt_column = (int(tilt_column_list[-1]))-1
 #####
-"""Extract rot and tilt values from file and save them in to lists of floats."""
+"""Extract rot and tilt values from file and save them in two lists of floats."""
 rot = []
 tilt = []
 for i in filelines_body_clean:
@@ -89,7 +89,7 @@ ax.scatter(rot_rad, tilt_m90_rad, cmap=color_cmap, c=m, s=2, alpha=0.4)
 """Thse two lines remove the ticks and their labels."""
 ax.set_xticklabels([])
 ax.set_yticklabels([])
-"""These for lines draw curve lines at x -120, -60, 60, 120."""
+"""These two lines draw curved lines at x -120, -60, 60, 120."""
 ax.plot(x_60_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
 ax.plot(x_m60_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
 ax.plot(x_120_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
