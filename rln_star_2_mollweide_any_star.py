@@ -86,7 +86,7 @@ fig = plt.figure()
 ax = plt.subplot(111, projection="mollweide")
 """s-->size of the dots, alpha--> tranparency with 0 transparent and 1 opaque."""
 ax.scatter(rot_rad, tilt_m90_rad, cmap=color_cmap, c=m, s=2, alpha=0.4)
-"""Thse two lines remove the ticks and their labels."""
+"""These two lines remove the ticks and their labels."""
 ax.set_xticklabels([])
 ax.set_yticklabels([])
 """These two lines draw curved lines at x -120, -60, 60, 120."""
@@ -97,7 +97,7 @@ ax.plot(x_m120_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
 """These two lines draw vertical and horizontal straight lines as x, y cartesian axes."""
 ax.vlines(0,-1.6,1.6, colors='k', lw=1.5, linestyles=':')
 ax.hlines(0,-10,10, colors='k', lw=1.5, linestyles=':')
-"""Writes a png dpi 300 file at the same location where the star file is."""
+"""Write a png dpi 300 file at the same location where the star file is."""
 plt.savefig(root_path, dpi=300)
 plt.show()
 
