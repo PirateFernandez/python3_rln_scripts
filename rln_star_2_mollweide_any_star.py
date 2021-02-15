@@ -98,7 +98,7 @@ ax.plot(x_m120_rad, np.arange(-1.5, 2, 0.5), color='k', lw=1.5, linestyle=':')
 ax.vlines(0,-1.6,1.6, colors='k', lw=1.5, linestyles=':')
 ax.hlines(0,-10,10, colors='k', lw=1.5, linestyles=':')
 """Write a png dpi 300 file at the same location where the star file is."""
-plt.savefig(root_path, dpi=300)
+plt.savefig('root_path', dpi=300)
 plt.show()
 
 
