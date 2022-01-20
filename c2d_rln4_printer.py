@@ -48,7 +48,7 @@ good_classes_renum = [i-1 for i in good_classes]
 ###
 with mrcfile.open(path_to_mrcs_file) as emd:
 	nx, ny, nz = emd.header['nx'], emd.header['ny'], emd.header['nz']
-	np_emd = emd.data.flatten(order='F').reshape(160, 160, 100)
+	np_emd = emd.data.flatten(order='F').reshape(nx, ny, nz)
 ###
 for i in (good_classes_renum):
 	c2d_num = i + 1
